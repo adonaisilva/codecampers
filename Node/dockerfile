@@ -1,0 +1,9 @@
+FROM node:alpine
+
+EXPOSE 8888
+
+COPY ./ /home/node/app/
+
+WORKDIR /home/node/app/
+
+RUN node index.js
