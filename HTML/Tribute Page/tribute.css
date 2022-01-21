@@ -1,0 +1,74 @@
+html{
+    /* Setting a base font size of 10px give us easier rem calculations
+     Info: 1rem === 10px, 1.5rem === 15px, 2rem === 20px and so forth
+   */
+    font-size: 10px;
+}
+
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&family=Ubuntu:ital,wght@0,400;0,700;1,700&display=swap');
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+header{
+    text-align: center;
+    position: relative;
+    top:auto;
+    margin-top: 5rem;
+    left: auto;
+}
+
+main{
+    background-color: #e2e4e5;
+}
+
+main li{
+    font-size: 2.0rem;
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+footer h3{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#title{
+    font-size: 5rem;
+    color: #006eff;
+    background-color: #e2e4e5;
+}
+
+#img-div{
+    display: flex;
+    flex-direction: column;
+    justify-items: center; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;       
+    
+}
+
+#image{
+    max-width: 100%;
+}
+
+#img-caption{
+    font-style: italic;
+    font: 1.5rem;
+}
+
+#content-title{
+    font-size: 3rem;
+    padding: 1.5rem 0 0 1.5rem;
+    text-align: center;
+    color: #ffa600;
+}
+
+
+
+
