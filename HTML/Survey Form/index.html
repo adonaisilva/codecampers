@@ -14,19 +14,19 @@
     </header>
     <main>
         <form action="" id="survey-form">
-            <div>
+            <div class="input-simple_text">
                 <label for="name" id="name-label">Name</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name" required>
             </div>
-            <div>
+            <div class="input-simple_text">
                 <label for="email" id="email-label">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter your email" required>
             </div>
-            <div>
+            <div class="input-simple_text">
                 <label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
                 <input type="number" name="age" id="number" placeholder="Enter your age" min="18" max="99">
             </div>        
-            <div>
+            <div class="input-dropdown">
                 <label for="dropdown">What type of gamer you are?</label>
                 <select name="gamer-type" id="dropdown">
                     <option value="casual">Casual Gamer</option>
@@ -38,7 +38,7 @@
                     <option value="girl">Gamer Girl</option>
                 </select>
             </div>
-            <div>
+            <div class="input-selection">
                 <p>Prefered gaming device</p>
                 <div>
                     <input type="radio" name="device" id="mobile" value="Mobile">
@@ -53,7 +53,7 @@
                     <label for="device">PC</label>
                 </div>
             </div>
-            <div>
+            <div class="input-selection">
                 <p>Style of games <span class="clue">(Check all that apply)</span></p>
                 <div>
                     <input type="checkbox" name="style" id="sandbox" value="Sandbox">
@@ -69,7 +69,7 @@
                 </div>
                 <div>
                     <input type="checkbox" name="style" id="moba" value="MOBA">
-                    <label for="style">MOBA</label>Sandbox
+                    <label for="style">MOBA</label>
                 </div>
                 <div>
                     <input type="checkbox" name="style" id="role-playing" value="Role-playing">
@@ -100,11 +100,11 @@
                     <label for="style">Platformer</label>
                 </div>
             </div>
-            <div>
+            <div class="input-text_area">
                 <label for="comments">Favorite gaming momment</label>
                 <textarea name="comments" id="comments" placeholder="Describe your favorite gaming momment"></textarea>
             </div>
-            <div>
+            <div class="input-button">
                 <button type="submit" id="submit">Submit</button>
             </div>
         </form>

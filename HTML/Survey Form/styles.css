@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');    
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+:root{
+    --primary-font: 'Orbitron', sans-serif;
+    --secondary-font: 'Source Code Pro', monospace;
+    --main-width: 60%;
+}
+
+html{
+    font-size: 10px;
+    text-shadow: .2rem .2rem .5rem rgb(73, 73, 73);
+    background-color: black;
+    color: #66B933;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+}
+
+label,
+p{
+    margin-bottom: .5rem;
+}
+
+textarea{
+    height: 10rem;
+}
+
+span{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+button{
+    font-size: 2rem;
+    background-color: #66B933;
+    color: black;
+    border: none;
+    padding: 1rem 0 1rem 0;
+    text-decoration: none;
+    box-shadow: .3rem .3rem 1rem rgb(156, 156, 156);
+}
+
+button:hover{
+    background-color: #2b6309;
+    box-shadow: .3rem .3rem 1rem rgb(49, 49, 49);
+}
+
+select, 
+input, 
+textarea, 
+.input-selection label{
+    font-family: var(--secondary-font)  
+}
+
+.input-simple_text, 
+.input-selection, 
+.input-dropdown, 
+.input-text_area,
+.input-button{
+    display:flex;
+    width: var(--main-width);
+    flex-direction: column;
+    margin: 1.5rem auto 0 auto;
+}
+
+#title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#description{
+    font-size: 2rem;
+    text-align: center;
+}
