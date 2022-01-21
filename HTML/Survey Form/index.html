@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Gaming preferences</p>
+    </header>
+    <main>
+        <form action="" id="survey-form">
+            <div>
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
+                <input type="number" name="age" id="number" placeholder="Enter your age" min="18" max="99">
+            </div>        
+            <div>
+                <label for="dropdown">What type of gamer you are?</label>
+                <select name="gamer-type" id="dropdown">
+                    <option value="casual">Casual Gamer</option>
+                    <option value="hardcore">Hardcore Gamer</option>
+                    <option value="newbie">Newbie</option>
+                    <option value="pro">Pro Gamer</option>
+                    <option value="import">Import Gamer</option>
+                    <option value="retro">Retrogramer, classic gamer</option>
+                    <option value="girl">Gamer Girl</option>
+                </select>
+            </div>
+            <div>
+                <p>Prefered gaming device</p>
+                <div>
+                    <input type="radio" name="device" id="mobile" value="Mobile">
+                    <label for="device">Mobile</label>
+                </div>
+                <div>
+                    <input type="radio" name="device" id="console" value="Console">
+                    <label for="device">Console</label>
+                </div>
+                <div>
+                    <input type="radio" name="device" id="pc" value="PC">
+                    <label for="device">PC</label>
+                </div>
+            </div>
+            <div>
+                <p>Style of games <span class="clue">(Check all that apply)</span></p>
+                <div>
+                    <input type="checkbox" name="style" id="sandbox" value="Sandbox">
+                    <label for="style">Sandbox</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="rts" value="RTS">
+                    <label for="style">RTS</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="shooter" value="Shooter">
+                    <label for="style">Shooter</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="moba" value="MOBA">
+                    <label for="style">MOBA</label>Sandbox
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="role-playing" value="Role-playing">
+                    <label for="style">Role-playing</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="simulation" value="Simulation">
+                    <label for="style">Simulation</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="sports" value="Sports">
+                    <label for="style">Sports</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="puzzles" value="Puzzles">
+                    <label for="style">Puzzles</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="action-adventure" value="Action-Adventure">
+                    <label for="style">Action-Adventure</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="survival-horror" value="Survival-Horror">
+                    <label for="style">Survival-Horror</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="style" id="platformer" value="Platformer">
+                    <label for="style">Platformer</label>
+                </div>
+            </div>
+            <div>
+                <label for="comments">Favorite gaming momment</label>
+                <textarea name="comments" id="comments" placeholder="Describe your favorite gaming momment"></textarea>
+            </div>
+            <div>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
