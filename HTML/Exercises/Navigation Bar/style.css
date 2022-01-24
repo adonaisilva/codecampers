@@ -1,0 +1,81 @@
+:root {
+    --main-font: "Lora", serif;
+    --secondary-font: "Ubuntu", sans-serif;
+    margin: 0; /*remove default margins*/
+}
+
+.container {
+    background-color: #f8f8f8;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #707070;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto; /*center the container*/
+}
+
+.container-nav {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between; /*push elements to the sides*/
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none; /* remove bullets from list*/
+    padding: 0; /* remove leftover padding from bullets*/
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 1em; /*create space to the left and let it get to the right border*/
+}
+
+nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    color: #1792d2;
+}
+
+h1 {
+    margin: 0; /*remove default margins*/
+    font-family: var(--main-font);
+    font-size: 2rem;
+    font-weight: normal;
+    color: #143774;
+    text-transform: none; /*remove uppercase transform from parent*/
+}
+
+.subtitle {
+    margin: 0; /*remove default margins*/
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #1792d2;
+}
+
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+    nav li {
+        margin-left: 0;
+    }
+}
