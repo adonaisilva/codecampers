@@ -1,0 +1,131 @@
+:root {
+    --main-font: "Ubuntu", sans-serif;
+    --secondaty-font: "Ubuntu Condensed", sans-serif;
+    --code-font: "Ubuntu Mono", monospace;
+    --nav-width: 20em;
+    --nav-height: 10em;
+}
+/*---------
+Layout
+---------*/
+
+body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    /* for testing*/
+    /* border: 1px dotted greenyellow; */
+    position: fixed;
+    min-width: var(--nav-width);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+nav ul {
+    /* for testing*/
+    /* border: 1px solid magenta; */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    /* for testing*/
+    /* border: 1px dashed blue; */
+}
+
+main {
+    position: absolute;
+    min-width: auto;
+    margin-left: var(--nav-width);
+}
+
+section {
+    padding: 1em;
+}
+
+/*---------
+Typography
+---------*/
+
+body {
+    font-family: var(--main-font);
+}
+
+nav {
+    font-family: var(--secondaty-font);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    font-size: 1.2rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+section header {
+    font-size: 1.8rem;
+}
+
+section p {
+    text-align: justify;
+}
+
+code {
+    font-family: var(--code-font);
+    font-size: 1.2rem;
+}
+
+/*---------
+Decoration
+---------*/
+
+nav {
+    background-color: beige;
+}
+
+nav li {
+    padding: 0.5em;
+    border-bottom: 1px solid black;
+}
+
+nav li:hover {
+    color: darkslategray;
+    border-bottom: 1px dotted darkslategray;
+}
+
+code {
+    background-color: lightblue;
+}
+
+/*---------
+Media Query
+---------*/
+
+@media (max-width: 700px) {
+    nav {
+        min-width: 100%;
+        max-height: var(--nav-height);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    main {
+        margin-left: 0;
+        margin-top: var(--nav-height);
+    }
+}
