@@ -1,0 +1,262 @@
+:root {
+    --nav-font: "Chakra Petch", sans-serif;
+    --main-font: "Inconsolata", monospace;
+    --sec-font: "Raleway", sans-serif;
+    --name-tag-font: "Gudea", sans-serif;
+    --name-tag-hand-font: "Homemade Apple", cursive;
+    --accent-color: #ff55ff;
+    --nav-padding-clearence: 1rem;
+    --nav-padding-clearence-big: 10rem;
+    --tag-border-radius: 0.8rem;
+    --tag-color: red;
+    --tile-link-hover-color: yellow;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    margin: 0; /*remove default margins*/
+}
+
+nav ul,
+footer ul {
+    list-style-type: none; /*remove bullets from list items*/
+    margin: 0; /*remove default margins*/
+    padding: 0; /*remove default paddings*/
+}
+
+/*---------
+Layout
+---------*/
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* push elements to the sides*/
+    position: fixed; /*fix the navbar on top of the view port*/
+    top: 0; /*move the navbar to the top edge*/
+    left: 50%;
+    transform: translateX(-50%); /*center navbar to viewport*/
+    z-index: 100; /*bring navbar on top of other content*/
+    padding: var(--nav-padding-clearence) 0; /*give some space from the top and content*/
+}
+
+nav ul {
+    display: flex;
+    gap: var(--nav-padding-clearence); /*create space between list elements*/
+    padding-right: var(
+        --nav-padding-clearence
+    ); /*give some space from the sides*/
+}
+
+#logo {
+    padding-left: var(
+        --nav-padding-clearence
+    ); /*give some space from the sides*/
+}
+
+#welcome-section {
+    height: 100vh; /*make the welcome section height equal to viewport height*/
+}
+
+#name-tag,
+#photo-user,
+h1 {
+    min-width: max-content; /*fit container to content width*/
+    position: absolute; /*fix item position relative to container*/
+    text-align: center; /*center item content */
+    left: 50%; /*first part to center item to viewport*/
+}
+
+#name-tag {
+    top: 25%; /*move element to percentage of viewport height*/
+    transform: translate(-50%, -25%); /*center and position element to height*/
+}
+
+h1 {
+    top: 40%; /*move element to percentage of viewport height*/
+    transform: translate(-50%, -40%); /*center and position element to height*/
+}
+
+#nt-1 {
+    /*TODO: change units to keep aspect ratio respect to viewport*/
+    padding: 0.5vmax 5vmax;
+}
+
+#nt-2 {
+    padding: 0.5vmax 5vmax;
+}
+
+#nt-3 {
+    padding: 1.5vmax 5vmax;
+}
+
+#nt-4 {
+    padding: 0.75vmax 5vmax;
+}
+
+#photo-user {
+    top: 85%; /*move element to percentage of viewport height*/
+    transform: translate(-50%, -85%); /*center and position element to height*/
+}
+
+#photo-user img {
+    width: clamp(150px, 30vw, 300px);
+    aspect-ratio: 1/1; /*make image square*/
+    object-fit: cover; /*crop image*/
+    object-position: 0 25%; /*move visible part of the image*/
+}
+
+#projects-container,
+footer ul {
+    display: flex;
+    flex-wrap: wrap; /*crate rows on overflow*/
+    justify-content: center; /*center childrens to container*/
+    gap: 2rem; /*add space between tiles*/
+    max-width: 80%; /*limit size of container */
+    margin: 0 auto; /*center containrer to viewport*/
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    max-width: clamp(250px, 40%, 400px); /*limit size of container*/
+}
+
+.tile-img {
+    aspect-ratio: 16/9; /*make image square*/
+    object-fit: cover; /*crop image*/
+}
+
+.tile-link {
+    padding: 1rem;
+}
+
+footer {
+    margin: 10vh 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/*---------
+Typography
+---------*/
+
+nav {
+    font-family: var(--nav-font);
+    text-transform: lowercase;
+    font-size: 1.5rem;
+}
+
+nav a,
+.tile-link,
+footer a {
+    text-decoration: none; /*remove links default formatting*/
+    color: inherit; /*inherit text color scheme*/
+}
+
+#nt-1 {
+    font-family: var(--name-tag-font);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#nt-2 {
+    font-family: var(--name-tag-font);
+    text-transform: lowercase;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+#nt-3 {
+    font-family: var(--name-tag-hand-font);
+    text-transform: lowercase;
+}
+
+h1 {
+    font-family: var(--nav-font);
+    text-transform: lowercase;
+}
+
+h2,
+h3 {
+    font-family: var(--sec-font);
+    font-weight: bold;
+}
+
+.tile-link,
+.contact-link {
+    text-align: center;
+    font-family: var(--main-font);
+    text-transform: lowercase;
+    font-size: 1.3rem;
+}
+
+/*---------
+Decoration
+---------*/
+nav span {
+    color: var(--accent-color);
+}
+
+#nt-1 {
+    border-top-left-radius: var(--tag-border-radius);
+    border-top-right-radius: var(--tag-border-radius);
+}
+
+#nt-4 {
+    border-bottom-left-radius: var(--tag-border-radius);
+    border-bottom-right-radius: var(--tag-border-radius);
+}
+
+#nt-1,
+#nt-2,
+#nt-4 {
+    background-color: var(--tag-color);
+}
+
+#nt-3 {
+    background-color: white;
+}
+
+#photo-user img {
+    border-radius: 50%; /*make image a circle, first need to be an aspect ratio if 1/1*/
+}
+
+.tile-link:hover::before {
+    color: var(--tile-link-hover-color);
+    content: "< ";
+}
+
+.tile-link:hover::after {
+    color: var(--tile-link-hover-color);
+    content: "/>";
+}
+
+.tile-link:hover {
+    transition: all 0.4s ease-in-out;
+}
+
+/*---------
+Media Queries
+---------*/
+@media (min-width: 900px) {
+    nav ul {
+        padding-right: var(
+            --nav-padding-clearence-big
+        ); /*give extra space from the sides*/
+    }
+
+    #logo {
+        padding-left: var(
+            --nav-padding-clearence-big
+        ); /*give extra space from the sides*/
+    }
+}
