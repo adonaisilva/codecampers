@@ -1,6 +1,6 @@
 //TODO: Create DB conection
 
-const dbconf = require("./../config/DB");
+const dbconf = require("../config/DB");
 
 async function connectToCluster(client) {
   console.log("Connecting to CodeCampers cluster...");

@@ -6,7 +6,7 @@ const uri =
   user +
   ":" +
   pass +
-  "@sample-data.oneqx.mongodb.net/NodeTest?retryWrites=true&w=majority"; /* CodeCampers Sample Database */
+  "@sample-data.oneqx.mongodb.net/NodeTest?retryWrites=true&w=majority"; /* CodeCampers Sample Database Cluster*/
 const { MongoClient } = require("mongodb");
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
