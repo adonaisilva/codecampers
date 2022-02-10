@@ -1,0 +1,1 @@
+SELECT COUNT(platillos.id), categoria.nombre FROM platillos INNER JOIN categoria ON platillos.categoriaId = categoria.Id GROUP BY categoria.nombre;
