@@ -4,6 +4,7 @@ var hello = require("../controller/hello.controller");
 
 router
   //
+  .get("/", hello.world)
   .get("/", hello.world);
 
 module.exports = router;

@@ -1,3 +1,5 @@
+const { MongoClient } = require("mongodb");
+
 const user = "camper";
 const pass = "$9m+hZ*P`3";
 
@@ -7,7 +9,6 @@ const uri =
   ":" +
   pass +
   "@sample-data.oneqx.mongodb.net/NodeTest?retryWrites=true&w=majority"; /* CodeCampers Sample Database Cluster*/
-const { MongoClient } = require("mongodb");
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
