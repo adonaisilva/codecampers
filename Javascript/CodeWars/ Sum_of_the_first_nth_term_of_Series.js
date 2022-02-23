@@ -10,7 +10,7 @@ You will only be given Natural Numbers as arguments. */
 
 function SeriesSum(n) {
   // Happy Coding ^_^
-  for (let index = 0, result = 0; index < n; index++) {
+  for (var index = 0, result = 0; index < n; index++) {
     result += 1 / (index * 3 + 1);
   }
   return result.toFixed(2).toString();
